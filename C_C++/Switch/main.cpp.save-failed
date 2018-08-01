@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <string.h>
+#include <string>
+#include <iostream>
+#include <conio.h>
+#include <wchar.h>
+
+
+int main()
+{
+    system("xcopy D:\\Escritorio\\Proyectos\\Ventacelulares\\TextoDeComentario.txt D:\\Escritorio\\Proyectos\\Ventacelulares\\BackUp_TextoDeComentario.txt /Y");
+    system("xcopy \"D:\\Escritorio\\Proyectos\\Ventacelulares\\URL a compartir.txt\" \"D:\\Escritorio\\Proyectos\\Ventacelulares\\BackUp_URL a compartir.txt\" /Y");
+    {
+        FILE *pf = _wfopen(L"D:\\Escritorio\\Proyectos\\Ventacelulares\\TextoDeComentario.txt",L"rt,ccs=UNICODE");
+        fgetwc(pf);
+        wchar_t cad[(pf->_cnt+2)/2]= {0};
+        rewind(pf);
+        while(*pf->_ptr != ';' && pf->_cnt)
+            fgetwc(pf);
+
+        int i = -1;
+        while(pf->_cnt)
+            cad[++i]=fgetwc(pf);
+
+        rewind(pf);
+        while(*pf->_ptr != ';' && pf->_cnt)
+            cad[++i]=fgetwc(pf);
+        fclose(pf);
+        pf = _wfopen(L"D:\\Escritorio\\Proyectos\\Ventacelulares\\TextoDeComentario.txt",L"wt,ccs=UNICODE");
+        fputws(cad,pf);
+        fclose(pf);
+    }
+
+    {
+        FILE *pf = fopen("D:\\Escritorio\\Proyectos\\Ventacelulares\\URL a compartir.txt","rt");
+        fgetc(pf);
+        char cad[(pf->_cnt+2)/2]= {0};
+        rewind(pf);
+        while(*pf->_ptr != ';' && pf->_cnt)
+            fgetc(pf);
+
+        int i = -1;
+        while(pf->_cnt)
+            cad[++i]=fgetc(pf);
+
+        rewind(pf);
+        while(*pf->_ptr != ';' && pf->_cnt)
+            cad[++i]=fgetc(pf);
+        fclose(pf);
+        pf = fopen("D:\\Escritorio\\Proyectos\\Ventacelulares\\URL a compartir.txt.txt","wt");
+        fputs(cad,pf);
+        fclose(pf);
+    }
+/// //////////////////////////////////////////////////////////////////////////////////
+
+}

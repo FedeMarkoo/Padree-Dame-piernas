@@ -1,0 +1,10 @@
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\bin\Debug\Music_Player_Remote.exe.config
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\bin\Debug\Music_Player_Remote.exe
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\bin\Debug\Music_Player_Remote.pdb
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\obj\Debug\Music_Player_Remote.csprojResolveAssemblyReference.cache
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\obj\Debug\Music_Player_Remote.Form1.resources
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\obj\Debug\Music_Player_Remote.Properties.Resources.resources
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\obj\Debug\Music_Player_Remote.csproj.GenerateResource.Cache
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\obj\Debug\Music_Player_Remote.csproj.CoreCompileInputs.cache
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\obj\Debug\Music_Player_Remote.exe
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Remote\Music_Player_Remote\obj\Debug\Music_Player_Remote.pdb

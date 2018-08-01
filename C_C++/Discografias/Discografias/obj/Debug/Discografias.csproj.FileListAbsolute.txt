@@ -1,0 +1,10 @@
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\bin\Debug\Discografias.exe.config
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\bin\Debug\Discografias.exe
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\bin\Debug\Discografias.pdb
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\obj\Debug\Discografias.csprojResolveAssemblyReference.cache
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\obj\Debug\Discografias.Form1.resources
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\obj\Debug\Discografias.Properties.Resources.resources
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\obj\Debug\Discografias.csproj.GenerateResource.Cache
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\obj\Debug\Discografias.csproj.CoreCompileInputs.cache
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\obj\Debug\Discografias.exe
+C:\Users\fedem\Escritorio\Proyectos\Discografias\Discografias\obj\Debug\Discografias.pdb

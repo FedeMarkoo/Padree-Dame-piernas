@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1510294469 source:c:\users\fedem\escritorio\facultad\programacion\switch\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	<string>
+	<iostream>
+	<conio.h>
+	<wchar.h>
+
+1512066421 source:d:\escritorio\proyectos\switch\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	<string>
+	<iostream>
+	<conio.h>
+	<wchar.h>
+

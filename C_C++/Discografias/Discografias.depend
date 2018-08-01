@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1504926567 source:c:\users\fedem\escritorio\proyectos\discografias\funciones.cpp
+	"Declaraciones.h"
+	"Funciones.h"
+
+1504811995 c:\users\fedem\escritorio\proyectos\discografias\declaraciones.h
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<string.h>
+	<dir.h>
+	<dirent.h>
+	<fstream>
+	<string>
+	<unistd.h>
+	<sys/stat.h>
+	<sys/types.h>
+	<tchar.h>
+	<cstdio>
+	<iostream>
+	<string.h>
+	<time.h>
+	<conio.h>
+	<io.h>
+	<fcntl.h>
+
+1504924514 c:\users\fedem\escritorio\proyectos\discografias\funciones.h
+
+1504814888 source:c:\users\fedem\escritorio\proyectos\discografias\main.cpp
+	"Declaraciones.h"
+	"Funciones.h"
+

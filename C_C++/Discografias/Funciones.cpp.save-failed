@@ -1,0 +1,119 @@
+#include "Declaraciones.h"
+using namespace std;
+
+void chrome(char *YaUsado)/// Abre el chrome y copia todo
+{
+    char comando[150]= {0};
+    char *aux=YaUsado-1;
+    while(*(++aux))
+        if(*aux==' ')
+            *aux='+';
+    sprintf(comando,"echo off &start chrome -incognito --new-window google.com/search?q=%s+albums",YaUsado);
+    system(comando);
+    aux=YaUsado-1;
+    while(*(++aux))
+        if(*aux=='+')
+            *aux=' ';
+    system("timeout 5");
+    keybd_event(VK_CONTROL,0,0,0);
+    keybd_event(VkKeyScan('A'),0,0,0);
+    Sleep(250);
+    keybd_event(VkKeyScan('C'),0,0,0);
+    Sleep(550);
+    keybd_event(VkKeyScan('W'),0,0,0);
+    keybd_event(VK_CONTROL,0,KEYEVENTF_KEYUP,0);
+}
+
+void getalbumes(Faltantes **Falta, char *EnUso,PunteroAlbums Album)/// Obtiene los nombres y compara contra la lista enviada
+{
+    chrome(EnUso);
+    HANDLE h;
+    char cadena[1999];
+    char *Cadena=cadena;
+    OpenClipboard(NULL);
+    h = GetClipboardData(CF_TEXT);
+    CloseClipboard();
+    sprintf(Cadena,"%.1999s",(char *)h);
+    Cadena=Cadena+170;
+    while(strncmp("lbumes",++Cadena,6)) {}
+    Cadena+=9;
+    int i=1001;
+    while(i--)
+        if(Cadena[i]=='\n'||Cadena[i]=='\r')
+            Cadena[i]=0;
+/// Ahora tengo los nombres de los albumes separados con 0s     hasta aca esta perfecto
+    while(strncmp(Cadena,"lbumes",6))
+    {
+        while(Album)
+        {
+            /// Deberia generar una lista con los elementos que faltan.....
+            if(strcmp(Cadena,Album->Nombre))
+            {
+                Faltantes* Aux=(Faltantes*)malloc(sizeof(Faltantes));
+                Aux->Siguiente=*Falta;
+                *Falta=Aux;
+                strcpy(Aux->Album,Cadena);
+                strcpy(Aux->Artista,EnUso);
+                FILE *pf=fopen("Faltantes.txt","a");
+                fprintf(pf,"%s / %s\n",Aux->Artista,Aux->Album);
+                Cadena+=strlen((*Falta)->Album)+10;  /// esto esta perfecto
+            }
+            Album=Album->Siguiente;
+        }
+    }
+}
+
+void BuscarAlbums(char * flaco, Albums *Agregar)
+{
+    string dir;
+    DIR *dp;
+    struct dirent *dirp;
+    dir=getenv("OneDrive");
+    dir+="\\Musica\\"+(string)flaco;
+    dp = opendir( dir.c_str() );
+    if (dp == NULL)
+        cout << "Error(" << errno << ") opening " << dir << endl;
+        printf("      Albumms:");
+    while ((dirp = readdir( dp )))
+        if((strcmp(dirp->d_name,".")&&strcmp(dirp->d_name,"Alarma.m3u8")&&strcmp(dirp->d_name,"..")&&strcmp(dirp->d_name,".iTunes Preferences.plist")&&strcmp(dirp->d_name,"desktop.ini")&&strcmp(dirp->d_name,"1Probando")))
+        {
+            printf("\n      %s",dirp->d_name);
+            Albums* aux=(Albums *)malloc(sizeof(Albums));
+            aux->Siguiente=*Agregar;
+            aux->Nombre=dirp->d_name;
+            *Agregar=aux;
+        }
+    closedir( dp );
+}
+
+
+void Buscar_archivos_y_carpetas(PunteroArtistas *Artista, char* YaLeido)
+{
+    string dir;
+    DIR *dp;
+    struct dirent *dirp;
+    system("cls");
+    dir=getenv("OneDrive");
+    dir+="\\Musica\\";
+    dp = opendir( dir.c_str() );
+    if (dp == NULL)
+        cout << "Error(" << errno << ") opening " << dir << endl;
+/// ///////////////////////////////////////////////////////////////////////////////
+    PunteroArtistas Aux=(PunteroArtistas)malloc(sizeof(Artistas));
+    Aux->Siguiente=*Artista;
+    strcpy(Aux->Nombre,YaLeido);
+    *Artista=Aux;
+    Aux->Albumes=0;
+/// ///////////////////////////////////////////////////////////////////////////////
+    while ((dirp = readdir( dp )))
+        if((strcmp(dirp->d_name,".")&&strcmp(dirp->d_name,YaLeido)>0&&strcmp(dirp->d_name,"Alarma.m3u8")&&strcmp(dirp->d_name,"..")&&strcmp(dirp->d_name,".iTunes Preferences.plist")&&strcmp(dirp->d_name,"desktop.ini")&&strcmp(dirp->d_name,"1Probando")))
+        {
+            printf("\n\n%s",dirp->d_name);
+            BuscarAlbums(dirp->d_name);
+            PunteroAlbums asd=(PunteroAlbums)malloc(sizeof(Albums));
+            asd->Siguiente=Aux->Albumes;
+            Aux->Albumes=asd;
+            strcpy(asd->Nombre,dirp->d_name);
+        }
+    closedir( dp );
+}

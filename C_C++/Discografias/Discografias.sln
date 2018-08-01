@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discografias", "Discografias\Discografias.csproj", "{0FD4D9EF-6ED0-44DA-A3F3-BE0888797B5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FD4D9EF-6ED0-44DA-A3F3-BE0888797B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD4D9EF-6ED0-44DA-A3F3-BE0888797B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD4D9EF-6ED0-44DA-A3F3-BE0888797B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD4D9EF-6ED0-44DA-A3F3-BE0888797B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2EB14E4-F802-4F72-9A7C-DEC597C98DDE}
+	EndGlobalSection
+EndGlobal

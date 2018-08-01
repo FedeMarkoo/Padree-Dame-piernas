@@ -1,0 +1,10 @@
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\bin\Debug\Music_Player_Reciver.exe.config
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\bin\Debug\Music_Player_Reciver.exe
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\bin\Debug\Music_Player_Reciver.pdb
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\obj\Debug\Music_Player_Reciver.csprojResolveAssemblyReference.cache
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\obj\Debug\Music_Player_Reciver.Form1.resources
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\obj\Debug\Music_Player_Reciver.Properties.Resources.resources
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\obj\Debug\Music_Player_Reciver.csproj.GenerateResource.Cache
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\obj\Debug\Music_Player_Reciver.csproj.CoreCompileInputs.cache
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\obj\Debug\Music_Player_Reciver.exe
+C:\Users\fedem\Escritorio\Proyectos\Music_Player_Reciver\Music_Player_Reciver\obj\Debug\Music_Player_Reciver.pdb

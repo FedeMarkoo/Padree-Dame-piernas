@@ -1,0 +1,15 @@
+#include "Prototipos.h"
+#include "Declaraciones.h"
+
+using namespace std;
+
+int main()
+{
+    Artistas* unflaco=0;
+    Faltantes* Falta=0;
+    char EnUso[99]={0};
+    Buscar_archivos_y_carpetas(0,0);
+    chrome(EnUso);
+    getalbumes(&Falta,EnUso,unflaco->Albumes);
+    return 0;
+}
